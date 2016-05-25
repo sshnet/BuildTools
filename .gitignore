@@ -1,0 +1,21 @@
+# Visual Studio build output
+src/**/bin/**
+src/**/obj/**
+test/**/bin/**
+test/**/obj/**
+
+# User-specific files 
+*.suo
+*.user
+
+# NuGet packages
+packages/
+
+# Visual Studio 2015 cache/options directory 
+src/.vs/
+
+# Automated build output
+build/target
+
+# Expanded/resolved project.json files
+project.lock.json
