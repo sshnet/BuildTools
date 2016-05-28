@@ -4,6 +4,9 @@ using Microsoft.Build.Utilities;
 
 namespace SshNet.BuildTools.Git
 {
+    /// <summary>
+    /// Pushes changes from a local Git repository to a its remote repository.
+    /// </summary>
     public class Push : Task
     {
         /// <summary>
@@ -23,6 +26,9 @@ namespace SshNet.BuildTools.Git
         /// </value>
         public ITaskItem Credentials { get; set; }
 
+        /// <summary>
+        /// Pushes changes from the specified local repository to a its remote repository.
+        /// </summary>
         public override bool Execute()
         {
             using (var repo = new Repository(WorkingDirectory))

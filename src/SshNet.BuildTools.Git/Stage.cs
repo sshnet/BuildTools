@@ -5,6 +5,9 @@ using Microsoft.Build.Utilities;
 
 namespace SshNet.BuildTools.Git
 {
+    /// <summary>
+    /// Promotes changes to the staging area of a given Git repository.
+    /// </summary>
     public class Stage : Task
     {
         /// <summary>
@@ -16,6 +19,9 @@ namespace SshNet.BuildTools.Git
         [Required]
         public string WorkingDirectory { get; set; }
 
+        /// <summary>
+        /// Stages changes in the specified working directory.
+        /// </summary>
         public override bool Execute()
         {
             using (var repo = new Repository(WorkingDirectory))

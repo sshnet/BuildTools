@@ -5,6 +5,9 @@ using Microsoft.Build.Utilities;
 
 namespace SshNet.BuildTools.Git
 {
+    /// <summary>
+    /// Commits changes in a given Git repository.
+    /// </summary>
     public class Commit : Task
     {
         /// <summary>
@@ -32,6 +35,10 @@ namespace SshNet.BuildTools.Git
         /// </value>
         [Output]
         public string Sha1 { get; set; }
+
+        /// <summary>
+        /// Commits changes in the specified repository.
+        /// </summary>
         public override bool Execute()
         {
             using (var repo = new Repository(WorkingDirectory))
